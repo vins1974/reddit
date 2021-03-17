@@ -1,0 +1,50 @@
+<html>
+<title>Predicting Score for Reddit post </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+.container-fluid {
+    padding: 10px 300px;
+}
+.navbar {
+    font-size: 10px !important;
+    line-height: 7 !important;
+    background-color: #808000;
+    z-index: 9999;    
+    letter-spacing: 3px;
+    
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #808000     !important;
+    }
+
+</style>
+
+<body>
+  <div class="jumbotron text-center">
+    <h1><h1 style="color:blue;">Predicting Score for Reddit post</h1>
+  </div>
+
+<div class="container-fluid">
+  <h5><h4 style="color:black;">  Enter Reddit URL for Score Prediction </h5>
+	
+  <form action="{{ url_for('predict') }}" method="post">
+
+		<div class="form-group">
+    <input type="text" class="form-control" id="url" name="url">
+  	</div>
+
+  	<center><button type="submit" class="btn btn-primary"> SCORE </button></center>
+	</form>
+	<hr>
+	<center><h4 style="color:blue;">  {{ score }} </h4></center>
+</div>
+<br> <br>
+
+</body>
+</html>
